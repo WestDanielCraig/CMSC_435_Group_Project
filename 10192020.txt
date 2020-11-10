@@ -1,0 +1,15 @@
+10/19/2020
+
+generalized linear model
+decision tree
+knn
+
+for tuesday:
+catch up Daniel
+Basima will demo her CGI jupyter notebook
+
+1 model - same features
+4 models - different algorithms and different features
+
+first resource website
+
