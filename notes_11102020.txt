@@ -1,0 +1,38 @@
+amino acid index database
+every amino acid has its own proteins - some are small, some are large
+
+can convert amigo acids into numbers
+take average of all numbers in a sequence
+give you an average property of the entire sequence
+approximation of the size of the whole protein
+
+removing X's can change what type of protein it is
+
+delete x, computer features without it
+then count how many sequences had 8
+
+21 features is really not nearly enough
+
+we can combine features from other sources
+just make sure that the we maintain the sequence order
+
+corresponding feature sets match with each feature
+
+software A and B may compute similar features and thus overlap
+	this is okay but it may be more computationally expensive
+
+maybe eliminate similar features
+get more features but don't overfit
+
+number of features should be at least an order of magnitude smaller than dataset
+
+hundreds are okay, thousands are not
+
+r package
+features from sequences
+
+SMOTE RNDNA?
+Half the rest?
+
+remove X and Z
+U -> 
