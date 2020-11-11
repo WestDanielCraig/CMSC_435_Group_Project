@@ -40,6 +40,8 @@ sheet = []
 cysteines_reduced = []
 cystines_residues = []
 
+ph = []
+
 training_data = pd.read_csv('../datasets/original_training.csv')
 
 for protein in training_data.itertuples():
@@ -129,12 +131,18 @@ for protein in training_data.itertuples():
     cysteines_reduced.append(molar_extinction[0])
     cystines_residues.append(molar_extinction[1])
 
+for i in isoelectric_point:
+    phCalc = analyzed_protein.charge_at_pH(i)
+    ph.append(phCalc)
+    # print(phCalc)
+
 training_data.columns = ["PROTEIN SEQUENCE", "CLASS"]
 training_data["Length"] = lengths
 training_data["Molecular Weight"] = weights
 training_data["Aromaticity"] = aromaticity
 training_data["Instability Index"] = instability_index
 training_data["Isoelectric Point"] = isoelectric_point
+training_data["pH Charge"] = ph
 training_data["Gravy"] = gravy_list
 training_data["Helix"] = helix
 training_data["Turn"] = turn
