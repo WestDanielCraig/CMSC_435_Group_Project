@@ -31,32 +31,6 @@ aromaticity = []
 instability_index = []
 isoelectric_point = []
 
-countA = []
-countC = []
-countD = []
-countE = []
-countF = []
-countG = []
-countH = []
-countI = []
-countK = []
-countL = []
-countM = []
-countN = []
-countP = []
-countQ = []
-countR = []
-countS = []
-countT = []
-countV = []
-countW = []
-countY = []
-
-aromaticity = []
-
-instability_index = []
-isoelectric_point = []
-
 gravy_list = []
 
 helix = []
@@ -137,43 +111,6 @@ for protein in training_data.itertuples():
 
     isoelectic = analyzed_protein.isoelectric_point()
     isoelectric_point.append(isoelectic)
-
-    # print("Index: %s" % protein[0])
-    # print("Protein Length: " + str(protein_length))
-    # print("Molecular Weight: %s" % molecular_weight)
-    # print(" ")
-    # print(amino_acid_count)
-
-    # df=pd.DataFrame(amino_acid_count)
-    # print(df)
-    # df.to_csv("amino.csv")
-    training_data.columns = ["PROTEIN SEQUENCE", "CLASS"]
-    training_data["LENGTH"] = lengths
-    training_data["MOLECULAR WEIGHT"] = weights
-    training_data["Aromaticity"] = aromaticity
-    training_data["Instability Index"] = instability_index
-    training_data["Isoelectric Point"] = isoelectric_point
-
-    training_data["COUNT-A"] = countA
-    training_data["COUNT-C"] = countC
-    training_data["COUNT-D"] = countD
-    training_data["COUNT-E"] = countE
-    training_data["COUNT-F"] = countF
-    training_data["COUNT-G"] = countG
-    training_data["COUNT-H"] = countH
-    training_data["COUNT-I"] = countI
-    training_data["COUNT-K"] = countK
-    training_data["COUNT-L"] = countL
-    training_data["COUNT-M"] = countM
-    training_data["COUNT-N"] = countN
-    training_data["COUNT-P"] = countP
-    training_data["COUNT-Q"] = countQ
-    training_data["COUNT-R"] = countR
-    training_data["COUNT-S"] = countS
-    training_data["COUNT-T"] = countT
-    training_data["COUNT-V"] = countV
-    training_data["COUNT-W"] = countW
-    training_data["COUNT-Y"] = countY
 
     ambigious_gravy = re.findall("X+|Z+|U+", protein[1])
     if ambigious_gravy:
