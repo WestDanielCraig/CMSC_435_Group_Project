@@ -2,53 +2,51 @@ from Bio.SeqUtils.ProtParam import ProteinAnalysis
 import pandas as pd
 import re
 
-
 lengths = []
 weights = []
 
-countA=[]
-countC=[]
-countD=[]
-countE=[]
-countF=[]
-countG=[]
-countH=[]
-countI=[]
-countK=[]
-countL=[]
-countM=[]
-countN=[]
-countP=[]
-countQ=[]
-countR=[]
-countS=[]
-countT=[]
-countV=[]
-countW=[]
-countY=[]
+countA = []
+countC = []
+countD = []
+countE = []
+countF = []
+countG = []
+countH = []
+countI = []
+countK = []
+countL = []
+countM = []
+countN = []
+countP = []
+countQ = []
+countR = []
+countS = []
+countT = []
+countV = []
+countW = []
+countY = []
 
+aromaticity = []
 
-aromaticity=[]
+instability_index = []
+isoelectric_point = []
 
-instability_index=[]
-isoelectric_point=[]
+gravy_list = []
 
-gravy_list=[]
+helix = []
+turn = []
+sheet = []
 
-helix=[]
-turn=[]
-sheet=[]
+cysteines_reduced = []
+cystines_residues = []
 
-cysteines_reduced =[]
-cystines_residues=[]
+ph = []
 
-ph=[]
-
-training_data = pd.read_csv('8319945.txt')
+training_data = pd.read_csv('../datasets/original_training.csv')
 
 for protein in training_data.itertuples():
     print(protein[1])
-    protein_length = len(str(protein[1])) #length of sequence
+    protein_length = len(str(protein[1]))  # length of sequence
     lengths.append(protein_length)
     analyzed_protein = ProteinAnalysis(str(protein[1]))
     ambigious_match = re.findall("X+|Z+|U+", protein[1])
@@ -60,8 +58,6 @@ for protein in training_data.itertuples():
 
     amino_acid_count = analyzed_protein.count_amino_acids()
     print(amino_acid_count)
-
-
 
     amino_acid_countA = (analyzed_protein.count_amino_acids()['A'])
     countA.append(amino_acid_countA)
@@ -104,7 +100,6 @@ for protein in training_data.itertuples():
     amino_acid_countY = (analyzed_protein.count_amino_acids()['Y'])
     countY.append(amino_acid_countY)
 
-
     aromaticity_count = analyzed_protein.aromaticity()
     aromaticity.append(aromaticity_count)
 
@@ -112,24 +107,22 @@ for protein in training_data.itertuples():
     if ambigious_instability:
         instability = "?"
     else:
-        instability= analyzed_protein.instability_index()
+        instability = analyzed_protein.instability_index()
 
     instability_index.append(instability)
 
     isoelectic = analyzed_protein.isoelectric_point()
     isoelectric_point.append(isoelectic)
 
-
     ambigious_gravy = re.findall("X+|Z+|U+", protein[1])
     if ambigious_gravy:
-        gravy="?"
+        gravy = "?"
     else:
-        gravy= analyzed_protein.gravy()
+        gravy = analyzed_protein.gravy()
 
     gravy_list.append(gravy)
 
-
-    secondary_structure=analyzed_protein.secondary_structure_fraction()
+    secondary_structure = analyzed_protein.secondary_structure_fraction()
     helix.append(secondary_structure[0])
     turn.append(secondary_structure[1])
     sheet.append(secondary_structure[2])
@@ -137,58 +130,45 @@ for protein in training_data.itertuples():
     molar_extinction = analyzed_protein.molar_extinction_coefficient()
     cysteines_reduced.append(molar_extinction[0])
     cystines_residues.append(molar_extinction[1])
-    
+
 for i in isoelectric_point:
     phCalc = analyzed_protein.charge_at_pH(i)
     ph.append(phCalc)
-    #print(phCalc)
-
-
-
-
-
-
-
-
-
+    # print(phCalc)
 
 training_data.columns = ["PROTEIN SEQUENCE", "CLASS"]
 training_data["Length"] = lengths
 training_data["Molecular Weight"] = weights
-training_data["Aromaticity"]=aromaticity
-training_data["Instability Index"]=instability_index
-training_data["Isoelectric Point"]=isoelectric_point
-training_data["pH Charge"]=ph
-training_data["Gravy"]=gravy_list
-training_data["Helix"]=helix
-training_data["Turn"]=turn
-training_data["Sheet"]=sheet
-training_data["Cysteines Reduced"]=cysteines_reduced
-training_data["Cystines Residues"]=cystines_residues
+training_data["Aromaticity"] = aromaticity
+training_data["Instability Index"] = instability_index
+training_data["Isoelectric Point"] = isoelectric_point
+training_data["pH Charge"] = ph
+training_data["Gravy"] = gravy_list
+training_data["Helix"] = helix
+training_data["Turn"] = turn
+training_data["Sheet"] = sheet
+training_data["Cysteines Reduced"] = cysteines_reduced
+training_data["Cystines Residues"] = cystines_residues
 
+training_data["COUNT-A"] = countA
+training_data["COUNT-C"] = countC
+training_data["COUNT-D"] = countD
+training_data["COUNT-E"] = countE
+training_data["COUNT-F"] = countF
+training_data["COUNT-G"] = countG
+training_data["COUNT-H"] = countH
+training_data["COUNT-I"] = countI
+training_data["COUNT-K"] = countK
+training_data["COUNT-L"] = countL
+training_data["COUNT-M"] = countM
+training_data["COUNT-N"] = countN
+training_data["COUNT-P"] = countP
+training_data["COUNT-Q"] = countQ
+training_data["COUNT-R"] = countR
+training_data["COUNT-S"] = countS
+training_data["COUNT-T"] = countT
+training_data["COUNT-V"] = countV
+training_data["COUNT-W"] = countW
+training_data["COUNT-Y"] = countY
 
-
-training_data["COUNT-A"]=countA
-training_data["COUNT-C"]=countC
-training_data["COUNT-D"]=countD
-training_data["COUNT-E"]=countE
-training_data["COUNT-F"]=countF
-training_data["COUNT-G"]=countG
-training_data["COUNT-H"]=countH
-training_data["COUNT-I"]=countI
-training_data["COUNT-K"]=countK
-training_data["COUNT-L"]=countL
-training_data["COUNT-M"]=countM
-training_data["COUNT-N"]=countN
-training_data["COUNT-P"]=countP
-training_data["COUNT-Q"]=countQ
-training_data["COUNT-R"]=countR
-training_data["COUNT-S"]=countS
-training_data["COUNT-T"]=countT
-training_data["COUNT-V"]=countV
-training_data["COUNT-W"]=countW
-training_data["COUNT-Y"]=countY
-
-
-
-training_data.to_csv('training_data.csv')
+training_data.to_csv('../datasets/training_data.csv')
