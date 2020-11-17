@@ -20,7 +20,7 @@ physico_chemical_df_drop = physico_chemical_df.drop(columns=["ID"])
 print(physico_chemical_df_drop)
 #print(bioP_df_drop)
 
-concat_dataset = pd.concat([bioP_df_drop, pybiomed_df_drop, physico_chemical_df_drop], axis=1)
+concat_dataset = pd.concat([bioP_df_drop, pybiomed_df_drop, physico_chemical_df_drop], axis=
 # concat_dataset = pd.concat([bioP_df_drop, pybiomed_df_drop, aac_df_no_id], axis=1)
 
 #print(concat_dataset)
