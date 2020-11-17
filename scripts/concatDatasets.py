@@ -12,7 +12,7 @@ final_quasi_result_df = pd.read_csv('../datasets/final_quasi_result.csv')
 
 
 
-aac_df_no_id = aac_df.drop(columns=['ID'])
+aac_df_drop = aac_df.drop(columns=['ID'])
 pybiomed_df_drop = pybiomed_df.drop(columns=['Sequence', 'Label'])
 bioP_df_drop = bioP_df.drop(columns=['PROTEIN SEQUENCE', 'Length', 'Instability Index', 'COUNT-A', 'COUNT-C', 'COUNT-D',
                                      'COUNT-E', 'COUNT-F', 'COUNT-G', 'COUNT-H', 'COUNT-I', 'COUNT-K',
@@ -20,17 +20,14 @@ bioP_df_drop = bioP_df.drop(columns=['PROTEIN SEQUENCE', 'Length', 'Instability 
                                      'COUNT-S', 'COUNT-T', 'COUNT-V', 'COUNT-W', 'COUNT-Y', 'Cysteines Reduced',
                                      'Cystines Residues'])
 physico_chemical_df_drop = physico_chemical_df.drop(columns=['ID'])
-combined_csv_df_drop = combined_csv_df.drop(columns=['Sequence_identifier', '_SolventAccessibilityC3',
-                                                     '_SolventAccessibilityC1', '_SecondaryStrC3',
-                                                     '_SolventAccessibilityC2', '_SecondaryStrC2',
-                                                     '_SecondaryStrC1', '_ChargeC1', '_ChargeC2'])
+combined_csv_df_drop = combined_csv_df.drop(columns=['Sequence_identifier'])
 dipeptide_training_df_drop = dipeptide_training_df.drop(columns=['Sequence_identifier'])
 final_amphiphilic_pseudo_result_df_drop = final_amphiphilic_pseudo_result_df.drop(columns=['ID'])
 final_pseudo_result_df_drop = final_pseudo_result_df.drop(columns=['ID'])
 final_quasi_result_df_drop = final_quasi_result_df.drop(columns=['ID'])
 
-#print(aac_df_no_id)
-#print(pybiomed_df_drop)
+#print(aac_df_drop)
+print(pybiomed_df_drop)
 #print(physico_chemical_df_drop)
 #print(bioP_df_drop)
 #print(combined_csv_df_drop)
@@ -41,9 +38,9 @@ final_quasi_result_df_drop = final_quasi_result_df.drop(columns=['ID'])
 
 concat_dataset = pd.concat([bioP_df_drop, pybiomed_df_drop, physico_chemical_df_drop, combined_csv_df_drop,
                             dipeptide_training_df_drop, final_amphiphilic_pseudo_result_df_drop, final_pseudo_result_df_drop, final_quasi_result_df_drop], axis=1)
-# concat_dataset = pd.concat([bioP_df_drop, pybiomed_df_drop, aac_df_no_id], axis=1)
+# concat_dataset = pd.concat([bioP_df_drop, pybiomed_df_drop, aac_df_drop], axis=1)
 
-print(concat_dataset)
+#print(concat_dataset)
 
 concat_dataset.to_csv('../datasets/concat_dataset.csv', index=False)
 
