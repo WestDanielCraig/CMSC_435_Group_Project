@@ -19,8 +19,11 @@ bioP_df_drop = bioP_df.drop(columns=['PROTEIN SEQUENCE', 'Length', 'Instability 
                                      'COUNT-L', 'COUNT-M', 'COUNT-N', 'COUNT-P', 'COUNT-Q', 'COUNT-R',
                                      'COUNT-S', 'COUNT-T', 'COUNT-V', 'COUNT-W', 'COUNT-Y', 'Cysteines Reduced',
                                      'Cystines Residues'])
-physico_chemical_df_drop = physico_chemical_df.drop(columns=["ID"])
-combined_csv_df_drop = combined_csv_df.drop(columns=["Sequence_identifier"])
+physico_chemical_df_drop = physico_chemical_df.drop(columns=['ID'])
+combined_csv_df_drop = combined_csv_df.drop(columns=['Sequence_identifier', '_SolventAccessibilityC3',
+                                                     '_SolventAccessibilityC1', '_SecondaryStrC3',
+                                                     '_SolventAccessibilityC2', '_SecondaryStrC2',
+                                                     '_SecondaryStrC1', '_ChargeC1', '_ChargeC2'])
 dipeptide_training_df_drop = dipeptide_training_df.drop(columns=['Sequence_identifier'])
 final_amphiphilic_pseudo_result_df_drop = final_amphiphilic_pseudo_result_df.drop(columns=['ID'])
 final_pseudo_result_df_drop = final_pseudo_result_df.drop(columns=['ID'])
