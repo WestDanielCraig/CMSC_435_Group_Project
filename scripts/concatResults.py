@@ -10,4 +10,4 @@ concatLogisticRegressionResults_df = pd.concat([pybiomed_df_sequences, logisticR
 
 print(concatLogisticRegressionResults_df)
 
-concatLogisticRegressionResults_df.to_csv('../datasets/testResults/logisticRegression/logisticRegressionResultsAppended')
+concatLogisticRegressionResults_df.to_csv('../datasets/testResults/logisticRegression/logisticRegressionResultsAppended.csv')
