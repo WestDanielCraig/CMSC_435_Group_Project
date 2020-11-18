@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.8.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.8.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.8.000" expanded="true" height="68" name="Read CSV" width="90" x="112" y="34">
+        <parameter key="csv_file" value="/Users/westdc/PycharmProjects/CMSC_435_Group_Project/datasets/TrainingDatasets/concat_dataset.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value="MM/dd/yyyy"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="UTF-8"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="CLASS.true.polynominal.label"/>
+          <parameter key="1" value="Molecular Weight.true.real.attribute"/>
+          <parameter key="2" value="Aromaticity.true.real.attribute"/>
+          <parameter key="3" value="Isoelectric Point.true.real.attribute"/>
+          <parameter key="4" value="pH Charge.true.real.attribute"/>
+          <parameter key="5" value="Gravy.true.real.attribute"/>
+          <parameter key="6" value="Helix.true.real.attribute"/>
+          <parameter key="7" value="Turn.true.real.attribute"/>
+          <parameter key="8" value="Sheet.true.real.attribute"/>
+          <parameter key="9" value="A.true.real.attribute"/>
+          <parameter key="10" value="C.true.real.attribute"/>
+          <parameter key="11" value="E.true.real.attribute"/>
+          <parameter key="12" value="D.true.real.attribute"/>
+          <parameter key="13" value="G.true.real.attribute"/>
+          <parameter key="14" value="F.true.real.attribute"/>
+          <parameter key="15" value="I.true.real.attribute"/>
+          <parameter key="16" value="H.true.real.attribute"/>
+          <parameter key="17" value="K.true.real.attribute"/>
+          <parameter key="18" value="M.true.real.attribute"/>
+          <parameter key="19" value="L.true.real.attribute"/>
+          <parameter key="20" value="N.true.real.attribute"/>
+          <parameter key="21" value="Q.true.real.attribute"/>
+          <parameter key="22" value="P.true.real.attribute"/>
+          <parameter key="23" value="S.true.real.attribute"/>
+          <parameter key="24" value="R.true.real.attribute"/>
+          <parameter key="25" value="T.true.real.attribute"/>
+          <parameter key="26" value="W.true.real.attribute"/>
+          <parameter key="27" value="V.true.real.attribute"/>
+          <parameter key="28" value="Y.true.real.attribute"/>
+          <parameter key="29" value="PCP_PC.true.real.attribute"/>
+          <parameter key="30" value="PCP_NC.true.real.attribute"/>
+          <parameter key="31" value="PCP_NE.true.real.attribute"/>
+          <parameter key="32" value="PCP_PO.true.real.attribute"/>
+          <parameter key="33" value="PCP_NP.true.real.attribute"/>
+          <parameter key="34" value="PCP_AL.true.real.attribute"/>
+          <parameter key="35" value="PCP_CY.true.real.attribute"/>
+          <parameter key="36" value="PCP_AR.true.real.attribute"/>
+          <parameter key="37" value="PCP_AC.true.real.attribute"/>
+          <parameter key="38" value="PCP_BS.true.real.attribute"/>
+          <parameter key="39" value="PCP_NE_pH.true.real.attribute"/>
+          <parameter key="40" value="PCP_HB.true.real.attribute"/>
+          <parameter key="41" value="PCP_HL.true.real.attribute"/>
+          <parameter key="42" value="PCP_NT.true.real.attribute"/>
+          <parameter key="43" value="PCP_HX.true.real.attribute"/>
+          <parameter key="44" value="PCP_SC.true.real.attribute"/>
+          <parameter key="45" value="PCP_TN.true.real.attribute"/>
+          <parameter key="46" value="PCP_SM.true.real.attribute"/>
+          <parameter key="47" value="PCP_LR.true.real.attribute"/>
+          <parameter key="48" value="_NormalizedVDWVC2.true.real.attribute"/>
+          <parameter key="49" value="_PolarizabilityC2.true.real.attribute"/>
+          <parameter key="50" value="_PolarizabilityC3.true.real.attribute"/>
+          <parameter key="51" value="_ChargeC1.true.real.attribute"/>
+          <parameter key="52" value="_PolarizabilityC1.true.real.attribute"/>
+          <parameter key="53" value="_SecondaryStrC2.true.real.attribute"/>
+          <parameter key="54" value="_SecondaryStrC3.true.real.attribute"/>
+          <parameter key="55" value="_NormalizedVDWVC3.true.real.attribute"/>
+          <parameter key="56" value="_SecondaryStrC1.true.real.attribute"/>
+          <parameter key="57" value="_SolventAccessibilityC1.true.real.attribute"/>
+          <parameter key="58" value="_SolventAccessibilityC2.true.real.attribute"/>
+          <parameter key="59" value="_SolventAccessibilityC3.true.real.attribute"/>
+          <parameter key="60" value="_NormalizedVDWVC1.true.real.attribute"/>
+          <parameter key="61" value="_HydrophobicityC3.true.real.attribute"/>
+          <parameter key="62" value="_HydrophobicityC1.true.real.attribute"/>
+          <parameter key="63" value="_ChargeC3.true.real.attribute"/>
+          <parameter key="64" value="_PolarityC2.true.real.attribute"/>
+          <parameter key="65" value="_PolarityC1.true.real.attribute"/>
+          <parameter key="66" value="_HydrophobicityC2.true.real.attribute"/>
+          <parameter key="67" value="_PolarityC3.true.real.attribute"/>
+          <parameter key="68" value="_ChargeC2.true.real.attribute"/>
+          <parameter key="69" value="GW.true.real.attribute"/>
+          <parameter key="70" value="GV.true.real.attribute"/>
+          <parameter key="71" value="GT.true.real.attribute"/>
+          <parameter key="72" value="GS.true.real.attribute"/>
+          <parameter key="73" value="GR.true.real.attribute"/>
+          <parameter key="74" value="GQ.true.real.attribute"/>
+          <parameter key="75" value="GP.true.real.attribute"/>
+          <parameter key="76" value="GY.true.real.attribute"/>
+          <parameter key="77" value="GG.true.real.attribute"/>
+          <parameter key="78" value="GF.true.real.attribute"/>
+          <parameter key="79" value="GE.true.real.attribute"/>
+          <parameter key="80" value="GD.true.real.attribute"/>
+          <parameter key="81" value="GC.true.real.attribute"/>
+          <parameter key="82" value="GA.true.real.attribute"/>
+          <parameter key="83" value="GN.true.real.attribute"/>
+          <parameter key="84" value="GM.true.real.attribute"/>
+          <parameter key="85" value="GL.true.real.attribute"/>
+          <parameter key="86" value="GK.true.real.attribute"/>
+          <parameter key="87" value="GI.true.real.attribute"/>
+          <parameter key="88" value="GH.true.real.attribute"/>
+          <parameter key="89" value="ME.true.real.attribute"/>
+          <parameter key="90" value="MD.true.real.attribute"/>
+          <parameter key="91" value="MG.true.real.attribute"/>
+          <parameter key="92" value="MF.true.real.attribute"/>
+          <parameter key="93" value="MA.true.real.attribute"/>
+          <parameter key="94" value="MC.true.real.attribute"/>
+          <parameter key="95" value="MM.true.real.attribute"/>
+          <parameter key="96" value="ML.true.real.attribute"/>
+          <parameter key="97" value="MN.true.real.attribute"/>
+          <parameter key="98" value="MI.true.real.attribute"/>
+          <parameter key="99" value="MH.true.real.attribute"/>
+          <parameter key="100" value="MK.true.real.attribute"/>
+          <parameter key="101" value="MT.true.real.attribute"/>
+          <parameter key="102" value="MW.true.real.attribute"/>
+          <parameter key="103" value="MV.true.real.attribute"/>
+          <parameter key="104" value="MQ.true.real.attribute"/>
+          <parameter key="105" value="MP.true.real.attribute"/>
+          <parameter key="106" value="MS.true.real.attribute"/>
+          <parameter key="107" value="MR.true.real.attribute"/>
+          <parameter key="108" value="MY.true.real.attribute"/>
+          <parameter key="109" value="FP.true.real.attribute"/>
+          <parameter key="110" value="FQ.true.real.attribute"/>
+          <parameter key="111" value="FR.true.real.attribute"/>
+          <parameter key="112" value="FS.true.real.attribute"/>
+          <parameter key="113" value="FT.true.real.attribute"/>
+          <parameter key="114" value="FV.true.real.attribute"/>
+          <parameter key="115" value="FW.true.real.attribute"/>
+          <parameter key="116" value="FY.true.real.attribute"/>
+          <parameter key="117" value="FA.true.real.attribute"/>
+          <parameter key="118" value="FC.true.real.attribute"/>
+          <parameter key="119" value="FD.true.real.attribute"/>
+          <parameter key="120" value="FE.true.real.attribute"/>
+          <parameter key="121" value="FF.true.real.attribute"/>
+          <parameter key="122" value="FG.true.real.attribute"/>
+          <parameter key="123" value="FH.true.real.attribute"/>
+          <parameter key="124" value="FI.true.real.attribute"/>
+          <parameter key="125" value="FK.true.real.attribute"/>
+          <parameter key="126" value="FL.true.real.attribute"/>
+          <parameter key="127" value="FM.true.real.attribute"/>
+          <parameter key="128" value="FN.true.real.attribute"/>
+          <parameter key="129" value="SY.true.real.attribute"/>
+          <parameter key="130" value="SS.true.real.attribute"/>
+          <parameter key="131" value="SR.true.real.attribute"/>
+          <parameter key="132" value="SQ.true.real.attribute"/>
+          <parameter key="133" value="SP.true.real.attribute"/>
+          <parameter key="134" value="SW.true.real.attribute"/>
+          <parameter key="135" value="SV.true.real.attribute"/>
+          <parameter key="136" value="ST.true.real.attribute"/>
+          <parameter key="137" value="SK.true.real.attribute"/>
+          <parameter key="138" value="SI.true.real.attribute"/>
+          <parameter key="139" value="SH.true.real.attribute"/>
+          <parameter key="140" value="SN.true.real.attribute"/>
+          <parameter key="141" value="SM.true.real.attribute"/>
+          <parameter key="142" value="SL.true.real.attribute"/>
+          <parameter key="143" value="SC.true.real.attribute"/>
+          <parameter key="144" value="SA.true.real.attribute"/>
+          <parameter key="145" value="SG.true.real.attribute"/>
+          <parameter key="146" value="SF.true.real.attribute"/>
+          <parameter key="147" value="SE.true.real.attribute"/>
+          <parameter key="148" value="SD.true.real.attribute"/>
+          <parameter key="149" value="YI.true.real.attribute"/>
+          <parameter key="150" value="YH.true.real.attribute"/>
+          <parameter key="151" value="YK.true.real.attribute"/>
+          <parameter key="152" value="YM.true.real.attribute"/>
+          <parameter key="153" value="YL.true.real.attribute"/>
+          <parameter key="154" value="YN.true.real.attribute"/>
+          <parameter key="155" value="YA.true.real.attribute"/>
+          <parameter key="156" value="YC.true.real.attribute"/>
+          <parameter key="157" value="YE.true.real.attribute"/>
+          <parameter key="158" value="YD.true.real.attribute"/>
+          <parameter key="159" value="YG.true.real.attribute"/>
+          <parameter key="160" value="YF.true.real.attribute"/>
+          <parameter key="161" value="YY.true.real.attribute"/>
+          <parameter key="162" value="YQ.true.real.attribute"/>
+          <parameter key="163" value="YP.true.real.attribute"/>
+          <parameter key="164" value="YS.true.real.attribute"/>
+          <parameter key="165" value="YR.true.real.attribute"/>
+          <parameter key="166" value="YT.true.real.attribute"/>
+          <parameter key="167" value="YW.true.real.attribute"/>
+          <parameter key="168" value="YV.true.real.attribute"/>
+          <parameter key="169" value="LF.true.real.attribute"/>
+          <parameter key="170" value="LG.true.real.attribute"/>
+          <parameter key="171" value="LD.true.real.attribute"/>
+          <parameter key="172" value="LE.true.real.attribute"/>
+          <parameter key="173" value="LC.true.real.attribute"/>
+          <parameter key="174" value="LA.true.real.attribute"/>
+          <parameter key="175" value="LN.true.real.attribute"/>
+          <parameter key="176" value="LL.true.real.attribute"/>
+          <parameter key="177" value="LM.true.real.attribute"/>
+          <parameter key="178" value="LK.true.real.attribute"/>
+          <parameter key="179" value="LH.true.real.attribute"/>
+          <parameter key="180" value="LI.true.real.attribute"/>
+          <parameter key="181" value="LV.true.real.attribute"/>
+          <parameter key="182" value="LW.true.real.attribute"/>
+          <parameter key="183" value="LT.true.real.attribute"/>
+          <parameter key="184" value="LR.true.real.attribute"/>
+          <parameter key="185" value="LS.true.real.attribute"/>
+          <parameter key="186" value="LP.true.real.attribute"/>
+          <parameter key="187" value="LQ.true.real.attribute"/>
+          <parameter key="188" value="LY.true.real.attribute"/>
+          <parameter key="189" value="RT.true.real.attribute"/>
+          <parameter key="190" value="RV.true.real.attribute"/>
+          <parameter key="191" value="RW.true.real.attribute"/>
+          <parameter key="192" value="RP.true.real.attribute"/>
+          <parameter key="193" value="RQ.true.real.attribute"/>
+          <parameter key="194" value="RR.true.real.attribute"/>
+          <parameter key="195" value="RS.true.real.attribute"/>
+          <parameter key="196" value="RY.true.real.attribute"/>
+          <parameter key="197" value="RD.true.real.attribute"/>
+          <parameter key="198" value="RE.true.real.attribute"/>
+          <parameter key="199" value="RF.true.real.attribute"/>
+          <parameter key="200" value="RG.true.real.attribute"/>
+          <parameter key="201" value="RA.true.real.attribute"/>
+          <parameter key="202" value="RC.true.real.attribute"/>
+          <parameter key="203" value="RL.true.real.attribute"/>
+          <parameter key="204" value="RM.true.real.attribute"/>
+          <parameter key="205" value="RN.true.real.attribute"/>
+          <parameter key="206" value="RH.true.real.attribute"/>
+          <parameter key="207" value="RI.true.real.attribute"/>
+          <parameter key="208" value="RK.true.real.attribute"/>
+          <parameter key="209" value="VH.true.real.attribute"/>
+          <parameter key="210" value="VI.true.real.attribute"/>
+          <parameter key="211" value="EM.true.real.attribute"/>
+          <parameter key="212" value="EL.true.real.attribute"/>
+          <parameter key="213" value="EN.true.real.attribute"/>
+          <parameter key="214" value="EI.true.real.attribute"/>
+          <parameter key="215" value="EH.true.real.attribute"/>
+          <parameter key="216" value="EK.true.real.attribute"/>
+          <parameter key="217" value="EE.true.real.attribute"/>
+          <parameter key="218" value="ED.true.real.attribute"/>
+          <parameter key="219" value="EG.true.real.attribute"/>
+          <parameter key="220" value="EF.true.real.attribute"/>
+          <parameter key="221" value="EA.true.real.attribute"/>
+          <parameter key="222" value="EC.true.real.attribute"/>
+          <parameter key="223" value="VM.true.real.attribute"/>
+          <parameter key="224" value="EY.true.real.attribute"/>
+          <parameter key="225" value="VN.true.real.attribute"/>
+          <parameter key="226" value="ET.true.real.attribute"/>
+          <parameter key="227" value="EW.true.real.attribute"/>
+          <parameter key="228" value="EV.true.real.attribute"/>
+          <parameter key="229" value="EQ.true.real.attribute"/>
+          <parameter key="230" value="EP.true.real.attribute"/>
+          <parameter key="231" value="ES.true.real.attribute"/>
+          <parameter key="232" value="ER.true.real.attribute"/>
+          <parameter key="233" value="VP.true.real.attribute"/>
+          <parameter key="234" value="VQ.true.real.attribute"/>
+          <parameter key="235" value="VR.true.real.attribute"/>
+          <parameter key="236" value="VT.true.real.attribute"/>
+          <parameter key="237" value="VW.true.real.attribute"/>
+          <parameter key="238" value="KC.true.real.attribute"/>
+          <parameter key="239" value="KA.true.real.attribute"/>
+          <parameter key="240" value="KG.true.real.attribute"/>
+          <parameter key="241" value="KF.true.real.attribute"/>
+          <parameter key="242" value="KE.true.real.attribute"/>
+          <parameter key="243" value="KD.true.real.attribute"/>
+          <parameter key="244" value="KK.true.real.attribute"/>
+          <parameter key="245" value="KI.true.real.attribute"/>
+          <parameter key="246" value="KH.true.real.attribute"/>
+          <parameter key="247" value="KN.true.real.attribute"/>
+          <parameter key="248" value="KM.true.real.attribute"/>
+          <parameter key="249" value="KL.true.real.attribute"/>
+          <parameter key="250" value="KS.true.real.attribute"/>
+          <parameter key="251" value="KR.true.real.attribute"/>
+          <parameter key="252" value="KQ.true.real.attribute"/>
+          <parameter key="253" value="KP.true.real.attribute"/>
+          <parameter key="254" value="KW.true.real.attribute"/>
+          <parameter key="255" value="KV.true.real.attribute"/>
+          <parameter key="256" value="KT.true.real.attribute"/>
+          <parameter key="257" value="KY.true.real.attribute"/>
+          <parameter key="258" value="DN.true.real.attribute"/>
+          <parameter key="259" value="DL.true.real.attribute"/>
+          <parameter key="260" value="DM.true.real.attribute"/>
+          <parameter key="261" value="DK.true.real.attribute"/>
+          <parameter key="262" value="DH.true.real.attribute"/>
+          <parameter key="263" value="DI.true.real.attribute"/>
+          <parameter key="264" value="DF.true.real.attribute"/>
+          <parameter key="265" value="DG.true.real.attribute"/>
+          <parameter key="266" value="DD.true.real.attribute"/>
+          <parameter key="267" value="DE.true.real.attribute"/>
+          <parameter key="268" value="DC.true.real.attribute"/>
+          <parameter key="269" value="DA.true.real.attribute"/>
+          <parameter key="270" value="DY.true.real.attribute"/>
+          <parameter key="271" value="DV.true.real.attribute"/>
+          <parameter key="272" value="DW.true.real.attribute"/>
+          <parameter key="273" value="DT.true.real.attribute"/>
+          <parameter key="274" value="DR.true.real.attribute"/>
+          <parameter key="275" value="DS.true.real.attribute"/>
+          <parameter key="276" value="DP.true.real.attribute"/>
+          <parameter key="277" value="DQ.true.real.attribute"/>
+          <parameter key="278" value="QQ.true.real.attribute"/>
+          <parameter key="279" value="QP.true.real.attribute"/>
+          <parameter key="280" value="QS.true.real.attribute"/>
+          <parameter key="281" value="QR.true.real.attribute"/>
+          <parameter key="282" value="QT.true.real.attribute"/>
+          <parameter key="283" value="QW.true.real.attribute"/>
+          <parameter key="284" value="QV.true.real.attribute"/>
+          <parameter key="285" value="QY.true.real.attribute"/>
+          <parameter key="286" value="QA.true.real.attribute"/>
+          <parameter key="287" value="QC.true.real.attribute"/>
+          <parameter key="288" value="QE.true.real.attribute"/>
+          <parameter key="289" value="QD.true.real.attribute"/>
+          <parameter key="290" value="QG.true.real.attribute"/>
+          <parameter key="291" value="QF.true.real.attribute"/>
+          <parameter key="292" value="QI.true.real.attribute"/>
+          <parameter key="293" value="QH.true.real.attribute"/>
+          <parameter key="294" value="QK.true.real.attribute"/>
+          <parameter key="295" value="QM.true.real.attribute"/>
+          <parameter key="296" value="QL.true.real.attribute"/>
+          <parameter key="297" value="QN.true.real.attribute"/>
+          <parameter key="298" value="WG.true.real.attribute"/>
+          <parameter key="299" value="WF.true.real.attribute"/>
+          <parameter key="300" value="WE.true.real.attribute"/>
+          <parameter key="301" value="WD.true.real.attribute"/>
+          <parameter key="302" value="WC.true.real.attribute"/>
+          <parameter key="303" value="WA.true.real.attribute"/>
+          <parameter key="304" value="WN.true.real.attribute"/>
+          <parameter key="305" value="WM.true.real.attribute"/>
+          <parameter key="306" value="WL.true.real.attribute"/>
+          <parameter key="307" value="WK.true.real.attribute"/>
+          <parameter key="308" value="WI.true.real.attribute"/>
+          <parameter key="309" value="WH.true.real.attribute"/>
+          <parameter key="310" value="WW.true.real.attribute"/>
+          <parameter key="311" value="WV.true.real.attribute"/>
+          <parameter key="312" value="WT.true.real.attribute"/>
+          <parameter key="313" value="WS.true.real.attribute"/>
+          <parameter key="314" value="WR.true.real.attribute"/>
+          <parameter key="315" value="WQ.true.real.attribute"/>
+          <parameter key="316" value="WP.true.real.attribute"/>
+          <parameter key="317" value="WY.true.real.attribute"/>
+          <parameter key="318" value="PR.true.real.attribute"/>
+          <parameter key="319" value="PS.true.real.attribute"/>
+          <parameter key="320" value="PP.true.real.attribute"/>
+          <parameter key="321" value="PQ.true.real.attribute"/>
+          <parameter key="322" value="PV.true.real.attribute"/>
+          <parameter key="323" value="PW.true.real.attribute"/>
+          <parameter key="324" value="PT.true.real.attribute"/>
+          <parameter key="325" value="PY.true.real.attribute"/>
+          <parameter key="326" value="PC.true.real.attribute"/>
+          <parameter key="327" value="PA.true.real.attribute"/>
+          <parameter key="328" value="PF.true.real.attribute"/>
+          <parameter key="329" value="PG.true.real.attribute"/>
+          <parameter key="330" value="PD.true.real.attribute"/>
+          <parameter key="331" value="PE.true.real.attribute"/>
+          <parameter key="332" value="PK.true.real.attribute"/>
+          <parameter key="333" value="PH.true.real.attribute"/>
+          <parameter key="334" value="PI.true.real.attribute"/>
+          <parameter key="335" value="PN.true.real.attribute"/>
+          <parameter key="336" value="PL.true.real.attribute"/>
+          <parameter key="337" value="PM.true.real.attribute"/>
+          <parameter key="338" value="CK.true.real.attribute"/>
+          <parameter key="339" value="CI.true.real.attribute"/>
+          <parameter key="340" value="CH.true.real.attribute"/>
+          <parameter key="341" value="CN.true.real.attribute"/>
+          <parameter key="342" value="CM.true.real.attribute"/>
+          <parameter key="343" value="CL.true.real.attribute"/>
+          <parameter key="344" value="CC.true.real.attribute"/>
+          <parameter key="345" value="CA.true.real.attribute"/>
+          <parameter key="346" value="CG.true.real.attribute"/>
+          <parameter key="347" value="CF.true.real.attribute"/>
+          <parameter key="348" value="CE.true.real.attribute"/>
+          <parameter key="349" value="CD.true.real.attribute"/>
+          <parameter key="350" value="CY.true.real.attribute"/>
+          <parameter key="351" value="CS.true.real.attribute"/>
+          <parameter key="352" value="CR.true.real.attribute"/>
+          <parameter key="353" value="CQ.true.real.attribute"/>
+          <parameter key="354" value="CP.true.real.attribute"/>
+          <parameter key="355" value="CW.true.real.attribute"/>
+          <parameter key="356" value="CV.true.real.attribute"/>
+          <parameter key="357" value="CT.true.real.attribute"/>
+          <parameter key="358" value="IY.true.real.attribute"/>
+          <parameter key="359" value="VA.true.real.attribute"/>
+          <parameter key="360" value="VC.true.real.attribute"/>
+          <parameter key="361" value="VD.true.real.attribute"/>
+          <parameter key="362" value="VE.true.real.attribute"/>
+          <parameter key="363" value="VF.true.real.attribute"/>
+          <parameter key="364" value="VG.true.real.attribute"/>
+          <parameter key="365" value="IQ.true.real.attribute"/>
+          <parameter key="366" value="IP.true.real.attribute"/>
+          <parameter key="367" value="IS.true.real.attribute"/>
+          <parameter key="368" value="IR.true.real.attribute"/>
+          <parameter key="369" value="VL.true.real.attribute"/>
+          <parameter key="370" value="IT.true.real.attribute"/>
+          <parameter key="371" value="IW.true.real.attribute"/>
+          <parameter key="372" value="IV.true.real.attribute"/>
+          <parameter key="373" value="II.true.real.attribute"/>
+          <parameter key="374" value="IH.true.real.attribute"/>
+          <parameter key="375" value="IK.true.real.attribute"/>
+          <parameter key="376" value="VS.true.real.attribute"/>
+          <parameter key="377" value="IM.true.real.attribute"/>
+          <parameter key="378" value="IL.true.real.attribute"/>
+          <parameter key="379" value="VV.true.real.attribute"/>
+          <parameter key="380" value="IN.true.real.attribute"/>
+          <parameter key="381" value="IA.true.real.attribute"/>
+          <parameter key="382" value="VY.true.real.attribute"/>
+          <parameter key="383" value="IC.true.real.attribute"/>
+          <parameter key="384" value="IE.true.real.attribute"/>
+          <parameter key="385" value="ID.true.real.attribute"/>
+          <parameter key="386" value="IG.true.real.attribute"/>
+          <parameter key="387" value="IF.true.real.attribute"/>
+          <parameter key="388" value="HY.true.real.attribute"/>
+          <parameter key="389" value="HR.true.real.attribute"/>
+          <parameter key="390" value="HS.true.real.attribute"/>
+          <parameter key="391" value="HP.true.real.attribute"/>
+          <parameter key="392" value="HQ.true.real.attribute"/>
+          <parameter key="393" value="HV.true.real.attribute"/>
+          <parameter key="394" value="HW.true.real.attribute"/>
+          <parameter key="395" value="HT.true.real.attribute"/>
+          <parameter key="396" value="HK.true.real.attribute"/>
+          <parameter key="397" value="HH.true.real.attribute"/>
+          <parameter key="398" value="HI.true.real.attribute"/>
+          <parameter key="399" value="HN.true.real.attribute"/>
+          <parameter key="400" value="HL.true.real.attribute"/>
+          <parameter key="401" value="HM.true.real.attribute"/>
+          <parameter key="402" value="HC.true.real.attribute"/>
+          <parameter key="403" value="HA.true.real.attribute"/>
+          <parameter key="404" value="HF.true.real.attribute"/>
+          <parameter key="405" value="HG.true.real.attribute"/>
+          <parameter key="406" value="HD.true.real.attribute"/>
+          <parameter key="407" value="HE.true.real.attribute"/>
+          <parameter key="408" value="NH.true.real.attribute"/>
+          <parameter key="409" value="NI.true.real.attribute"/>
+          <parameter key="410" value="NK.true.real.attribute"/>
+          <parameter key="411" value="NL.true.real.attribute"/>
+          <parameter key="412" value="NM.true.real.attribute"/>
+          <parameter key="413" value="NN.true.real.attribute"/>
+          <parameter key="414" value="NA.true.real.attribute"/>
+          <parameter key="415" value="NC.true.real.attribute"/>
+          <parameter key="416" value="ND.true.real.attribute"/>
+          <parameter key="417" value="NE.true.real.attribute"/>
+          <parameter key="418" value="NF.true.real.attribute"/>
+          <parameter key="419" value="NG.true.real.attribute"/>
+          <parameter key="420" value="NY.true.real.attribute"/>
+          <parameter key="421" value="NP.true.real.attribute"/>
+          <parameter key="422" value="NQ.true.real.attribute"/>
+          <parameter key="423" value="NR.true.real.attribute"/>
+          <parameter key="424" value="NS.true.real.attribute"/>
+          <parameter key="425" value="NT.true.real.attribute"/>
+          <parameter key="426" value="NV.true.real.attribute"/>
+          <parameter key="427" value="NW.true.real.attribute"/>
+          <parameter key="428" value="TY.true.real.attribute"/>
+          <parameter key="429" value="TV.true.real.attribute"/>
+          <parameter key="430" value="TW.true.real.attribute"/>
+          <parameter key="431" value="TT.true.real.attribute"/>
+          <parameter key="432" value="TR.true.real.attribute"/>
+          <parameter key="433" value="TS.true.real.attribute"/>
+          <parameter key="434" value="TP.true.real.attribute"/>
+          <parameter key="435" value="TQ.true.real.attribute"/>
+          <parameter key="436" value="TN.true.real.attribute"/>
+          <parameter key="437" value="TL.true.real.attribute"/>
+          <parameter key="438" value="TM.true.real.attribute"/>
+          <parameter key="439" value="TK.true.real.attribute"/>
+          <parameter key="440" value="TH.true.real.attribute"/>
+          <parameter key="441" value="TI.true.real.attribute"/>
+          <parameter key="442" value="TF.true.real.attribute"/>
+          <parameter key="443" value="TG.true.real.attribute"/>
+          <parameter key="444" value="TD.true.real.attribute"/>
+          <parameter key="445" value="TE.true.real.attribute"/>
+          <parameter key="446" value="TC.true.real.attribute"/>
+          <parameter key="447" value="TA.true.real.attribute"/>
+          <parameter key="448" value="AA.true.real.attribute"/>
+          <parameter key="449" value="AC.true.real.attribute"/>
+          <parameter key="450" value="AE.true.real.attribute"/>
+          <parameter key="451" value="AD.true.real.attribute"/>
+          <parameter key="452" value="AG.true.real.attribute"/>
+          <parameter key="453" value="AF.true.real.attribute"/>
+          <parameter key="454" value="AI.true.real.attribute"/>
+          <parameter key="455" value="AH.true.real.attribute"/>
+          <parameter key="456" value="AK.true.real.attribute"/>
+          <parameter key="457" value="AM.true.real.attribute"/>
+          <parameter key="458" value="AL.true.real.attribute"/>
+          <parameter key="459" value="AN.true.real.attribute"/>
+          <parameter key="460" value="AQ.true.real.attribute"/>
+          <parameter key="461" value="AP.true.real.attribute"/>
+          <parameter key="462" value="AS.true.real.attribute"/>
+          <parameter key="463" value="AR.true.real.attribute"/>
+          <parameter key="464" value="AT.true.real.attribute"/>
+          <parameter key="465" value="AW.true.real.attribute"/>
+          <parameter key="466" value="AV.true.real.attribute"/>
+          <parameter key="467" value="AY.true.real.attribute"/>
+          <parameter key="468" value="VK.true.real.attribute"/>
+          <parameter key="469" value="APAAC1_A.true.real.attribute"/>
+          <parameter key="470" value="APAAC1_C.true.real.attribute"/>
+          <parameter key="471" value="APAAC1_D.true.real.attribute"/>
+          <parameter key="472" value="APAAC1_E.true.real.attribute"/>
+          <parameter key="473" value="APAAC1_F.true.real.attribute"/>
+          <parameter key="474" value="APAAC1_G.true.real.attribute"/>
+          <parameter key="475" value="APAAC1_H.true.real.attribute"/>
+          <parameter key="476" value="APAAC1_I.true.real.attribute"/>
+          <parameter key="477" value="APAAC1_K.true.real.attribute"/>
+          <parameter key="478" value="APAAC1_L.true.real.attribute"/>
+          <parameter key="479" value="APAAC1_M.true.real.attribute"/>
+          <parameter key="480" value="APAAC1_N.true.real.attribute"/>
+          <parameter key="481" value="APAAC1_P.true.real.attribute"/>
+          <parameter key="482" value="APAAC1_Q.true.real.attribute"/>
+          <parameter key="483" value="APAAC1_R.true.real.attribute"/>
+          <parameter key="484" value="APAAC1_S.true.real.attribute"/>
+          <parameter key="485" value="APAAC1_T.true.real.attribute"/>
+          <parameter key="486" value="APAAC1_V.true.real.attribute"/>
+          <parameter key="487" value="APAAC1_W.true.real.attribute"/>
+          <parameter key="488" value="APAAC1_Y.true.real.attribute"/>
+          <parameter key="489" value="APAAC1_HB_lam1.true.real.attribute"/>
+          <parameter key="490" value="APAAC1_HL_lam1.true.real.attribute"/>
+          <parameter key="491" value="APAAC1_SC_lam1.true.real.attribute"/>
+          <parameter key="492" value="PAAC1_A.true.real.attribute"/>
+          <parameter key="493" value="PAAC1_C.true.real.attribute"/>
+          <parameter key="494" value="PAAC1_D.true.real.attribute"/>
+          <parameter key="495" value="PAAC1_E.true.real.attribute"/>
+          <parameter key="496" value="PAAC1_F.true.real.attribute"/>
+          <parameter key="497" value="PAAC1_G.true.real.attribute"/>
+          <parameter key="498" value="PAAC1_H.true.real.attribute"/>
+          <parameter key="499" value="PAAC1_I.true.real.attribute"/>
+          <parameter key="500" value="PAAC1_K.true.real.attribute"/>
+          <parameter key="501" value="PAAC1_L.true.real.attribute"/>
+          <parameter key="502" value="PAAC1_M.true.real.attribute"/>
+          <parameter key="503" value="PAAC1_N.true.real.attribute"/>
+          <parameter key="504" value="PAAC1_P.true.real.attribute"/>
+          <parameter key="505" value="PAAC1_Q.true.real.attribute"/>
+          <parameter key="506" value="PAAC1_R.true.real.attribute"/>
+          <parameter key="507" value="PAAC1_S.true.real.attribute"/>
+          <parameter key="508" value="PAAC1_T.true.real.attribute"/>
+          <parameter key="509" value="PAAC1_V.true.real.attribute"/>
+          <parameter key="510" value="PAAC1_W.true.real.attribute"/>
+          <parameter key="511" value="PAAC1_Y.true.real.attribute"/>
+          <parameter key="512" value="PAAC1_lam1.true.real.attribute"/>
+          <parameter key="513" value="QSO1_SC_A.true.real.attribute"/>
+          <parameter key="514" value="QSO1_SC_C.true.real.attribute"/>
+          <parameter key="515" value="QSO1_SC_D.true.real.attribute"/>
+          <parameter key="516" value="QSO1_SC_E.true.real.attribute"/>
+          <parameter key="517" value="QSO1_SC_F.true.real.attribute"/>
+          <parameter key="518" value="QSO1_SC_G.true.real.attribute"/>
+          <parameter key="519" value="QSO1_SC_H.true.real.attribute"/>
+          <parameter key="520" value="QSO1_SC_I.true.real.attribute"/>
+          <parameter key="521" value="QSO1_SC_K.true.real.attribute"/>
+          <parameter key="522" value="QSO1_SC_L.true.real.attribute"/>
+          <parameter key="523" value="QSO1_SC_M.true.real.attribute"/>
+          <parameter key="524" value="QSO1_SC_N.true.real.attribute"/>
+          <parameter key="525" value="QSO1_SC_P.true.real.attribute"/>
+          <parameter key="526" value="QSO1_SC_Q.true.real.attribute"/>
+          <parameter key="527" value="QSO1_SC_R.true.real.attribute"/>
+          <parameter key="528" value="QSO1_SC_S.true.real.attribute"/>
+          <parameter key="529" value="QSO1_SC_T.true.real.attribute"/>
+          <parameter key="530" value="QSO1_SC_V.true.real.attribute"/>
+          <parameter key="531" value="QSO1_SC_W.true.real.attribute"/>
+          <parameter key="532" value="QSO1_SC_Y.true.real.attribute"/>
+          <parameter key="533" value="QSO1_G_A.true.real.attribute"/>
+          <parameter key="534" value="QSO1_G_C.true.real.attribute"/>
+          <parameter key="535" value="QSO1_G_D.true.real.attribute"/>
+          <parameter key="536" value="QSO1_G_E.true.real.attribute"/>
+          <parameter key="537" value="QSO1_G_F.true.real.attribute"/>
+          <parameter key="538" value="QSO1_G_G.true.real.attribute"/>
+          <parameter key="539" value="QSO1_G_H.true.real.attribute"/>
+          <parameter key="540" value="QSO1_G_I.true.real.attribute"/>
+          <parameter key="541" value="QSO1_G_K.true.real.attribute"/>
+          <parameter key="542" value="QSO1_G_L.true.real.attribute"/>
+          <parameter key="543" value="QSO1_G_M.true.real.attribute"/>
+          <parameter key="544" value="QSO1_G_N.true.real.attribute"/>
+          <parameter key="545" value="QSO1_G_P.true.real.attribute"/>
+          <parameter key="546" value="QSO1_G_Q.true.real.attribute"/>
+          <parameter key="547" value="QSO1_G_R.true.real.attribute"/>
+          <parameter key="548" value="QSO1_G_S.true.real.attribute"/>
+          <parameter key="549" value="QSO1_G_T.true.real.attribute"/>
+          <parameter key="550" value="QSO1_G_V.true.real.attribute"/>
+          <parameter key="551" value="QSO1_G_W.true.real.attribute"/>
+          <parameter key="552" value="QSO1_G_Y.true.real.attribute"/>
+          <parameter key="553" value="QSO1_SC1.true.real.attribute"/>
+          <parameter key="554" value="QSO1_G1.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="replace_missing_values" compatibility="9.8.000" expanded="true" height="103" name="Replace Missing Values" width="90" x="313" y="34">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="default" value="average"/>
+        <list key="columns"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="9.8.000" expanded="true" height="82" name="Set Role" width="90" x="514" y="34">
+        <parameter key="attribute_name" value="CLASS"/>
+        <parameter key="target_role" value="label"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="false" class="select_attributes" compatibility="9.8.000" expanded="true" height="82" name="Select Attributes" width="90" x="581" y="187">
+        <parameter key="attribute_filter_type" value="subset"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value="_ChargeC1|_ChargeC2|_ChargeC3|_HydrophobicityC1|_HydrophobicityC2|_HydrophobicityC3|_NormalizedVDWVC1|_NormalizedVDWVC2|_NormalizedVDWVC3|_PolarityC1|_PolarityC2|_PolarityC3|_PolarizabilityC1|_PolarizabilityC2|_PolarizabilityC3|_SecondaryStrC1|_SecondaryStrC2|_SecondaryStrC3|_SolventAccessibilityC1|_SolventAccessibilityC2|_SolventAccessibilityC3|A|AA|AC|AD|AE|AF|AG|AH|AI|AK|AL|AM|AN|AP|APAAC1_A|APAAC1_C|APAAC1_D|APAAC1_E|APAAC1_F|APAAC1_G|APAAC1_H|APAAC1_HB_lam1|APAAC1_HL_lam1|APAAC1_I|APAAC1_K|APAAC1_L|APAAC1_M|APAAC1_N|APAAC1_P|APAAC1_Q|APAAC1_R|APAAC1_S|APAAC1_SC_lam1|APAAC1_T|APAAC1_V|APAAC1_W|APAAC1_Y|Aromaticity|CLASS|Gravy|Helix|Isoelectric Point|Molecular Weight|PAAC1_A|PAAC1_C|PAAC1_D|PAAC1_E|PAAC1_F|PAAC1_G|PAAC1_H|PAAC1_I|PAAC1_K|PAAC1_L|PAAC1_lam1|PAAC1_M|PAAC1_N|PAAC1_P|PAAC1_Q|PAAC1_R|PAAC1_S|PAAC1_T|PAAC1_V|PAAC1_W|PAAC1_Y|PCP_AC|PCP_AL|PCP_AR|PCP_BS|PCP_CY|PCP_HB|PCP_HL|PCP_HX|PCP_LR|PCP_NC|PCP_NE|PCP_NE_pH|PCP_NP|PCP_NT|PCP_PC|PCP_PO|PCP_SC|PCP_SM|PCP_TN|pH Charge|QSO1_G1|QSO1_G_A|QSO1_G_C|QSO1_G_D|QSO1_G_E|QSO1_G_F|QSO1_G_G|QSO1_G_H|QSO1_G_I|QSO1_G_K|QSO1_G_L|QSO1_G_M|QSO1_G_N|QSO1_G_P|QSO1_G_Q|QSO1_G_R|QSO1_G_S|QSO1_G_T|QSO1_G_V|QSO1_G_W|QSO1_G_Y|QSO1_SC1|QSO1_SC_A|QSO1_SC_C|QSO1_SC_D|QSO1_SC_E|QSO1_SC_F|QSO1_SC_G|QSO1_SC_H|QSO1_SC_I|QSO1_SC_K|QSO1_SC_L|QSO1_SC_M|QSO1_SC_N|QSO1_SC_P|QSO1_SC_Q|QSO1_SC_R|QSO1_SC_S|QSO1_SC_T|QSO1_SC_V|QSO1_SC_W|QSO1_SC_Y|Sheet|Turn|C|D|E|F|G|H|I|K|L|M|N|P|Q|R|S|T|V|W|Y"/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:cross_validation" compatibility="9.8.000" expanded="true" height="145" name="Cross Validation" width="90" x="782" y="34">
+        <parameter key="split_on_batch_attribute" value="false"/>
+        <parameter key="leave_one_out" value="false"/>
+        <parameter key="number_of_folds" value="5"/>
+        <parameter key="sampling_type" value="automatic"/>
+        <parameter key="use_local_random_seed" value="false"/>
+        <parameter key="local_random_seed" value="1992"/>
+        <parameter key="enable_parallel_execution" value="true"/>
+        <process expanded="true">
+          <operator activated="false" class="operator_toolbox:smote" compatibility="2.7.000" expanded="true" height="82" name="SMOTE Upsampling" width="90" x="45" y="595">
+            <parameter key="number_of_neighbours" value="5"/>
+            <parameter key="normalize" value="true"/>
+            <parameter key="equalize_classes" value="true"/>
+            <parameter key="upsampling_size" value="1205"/>
+            <parameter key="auto_detect_minority_class" value="true"/>
+            <parameter key="round_integers" value="true"/>
+            <parameter key="nominal_change_rate" value="0.5"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+          </operator>
+          <operator activated="false" class="concurrency:parallel_decision_tree" compatibility="9.8.000" expanded="true" height="103" name="Decision Tree" width="90" x="380" y="493">
+            <parameter key="criterion" value="gain_ratio"/>
+            <parameter key="maximal_depth" value="10"/>
+            <parameter key="apply_pruning" value="true"/>
+            <parameter key="confidence" value="0.1"/>
+            <parameter key="apply_prepruning" value="true"/>
+            <parameter key="minimal_gain" value="0.01"/>
+            <parameter key="minimal_leaf_size" value="2"/>
+            <parameter key="minimal_size_for_split" value="4"/>
+            <parameter key="number_of_prepruning_alternatives" value="3"/>
+          </operator>
+          <operator activated="false" class="k_nn" compatibility="9.8.000" expanded="true" height="82" name="k-NN" width="90" x="380" y="391">
+            <parameter key="k" value="5"/>
+            <parameter key="weighted_vote" value="true"/>
+            <parameter key="measure_types" value="MixedMeasures"/>
+            <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+            <parameter key="nominal_measure" value="NominalDistance"/>
+            <parameter key="numerical_measure" value="EuclideanDistance"/>
+            <parameter key="divergence" value="GeneralizedIDivergence"/>
+            <parameter key="kernel_type" value="radial"/>
+            <parameter key="kernel_gamma" value="1.0"/>
+            <parameter key="kernel_sigma1" value="1.0"/>
+            <parameter key="kernel_sigma2" value="0.0"/>
+            <parameter key="kernel_sigma3" value="2.0"/>
+            <parameter key="kernel_degree" value="3.0"/>
+            <parameter key="kernel_shift" value="1.0"/>
+            <parameter key="kernel_a" value="1.0"/>
+            <parameter key="kernel_b" value="0.0"/>
+          </operator>
+          <operator activated="false" class="naive_bayes" compatibility="9.8.000" expanded="true" height="82" name="Naive Bayes" width="90" x="380" y="289">
+            <parameter key="laplace_correction" value="true"/>
+          </operator>
+          <operator activated="false" class="sample" compatibility="9.8.000" expanded="true" height="82" name="Sample" width="90" x="45" y="493">
+            <parameter key="sample" value="absolute"/>
+            <parameter key="balance_data" value="true"/>
+            <parameter key="sample_size" value="100"/>
+            <parameter key="sample_ratio" value="0.1"/>
+            <parameter key="sample_probability" value="0.1"/>
+            <list key="sample_size_per_class">
+              <parameter key="nonDRNA" value="786"/>
+              <parameter key="DRNA" value="300"/>
+              <parameter key="DNA" value="391"/>
+              <parameter key="RNA" value="523"/>
+            </list>
+            <list key="sample_ratio_per_class"/>
+            <list key="sample_probability_per_class"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+          </operator>
+          <operator activated="true" class="adaboost" compatibility="9.8.000" expanded="true" height="82" name="AdaBoost" width="90" x="246" y="34">
+            <parameter key="iterations" value="10"/>
+            <process expanded="true">
+              <operator activated="false" class="support_vector_machine" compatibility="9.8.000" expanded="true" height="124" name="SVM (2)" width="90" x="447" y="34">
+                <parameter key="kernel_type" value="dot"/>
+                <parameter key="kernel_gamma" value="1.0"/>
+                <parameter key="kernel_sigma1" value="1.0"/>
+                <parameter key="kernel_sigma2" value="0.0"/>
+                <parameter key="kernel_sigma3" value="2.0"/>
+                <parameter key="kernel_shift" value="1.0"/>
+                <parameter key="kernel_degree" value="2.0"/>
+                <parameter key="kernel_a" value="1.0"/>
+                <parameter key="kernel_b" value="0.0"/>
+                <parameter key="kernel_cache" value="200"/>
+                <parameter key="C" value="0.0"/>
+                <parameter key="convergence_epsilon" value="0.001"/>
+                <parameter key="max_iterations" value="100000"/>
+                <parameter key="scale" value="true"/>
+                <parameter key="calculate_weights" value="true"/>
+                <parameter key="return_optimization_performance" value="true"/>
+                <parameter key="L_pos" value="1.0"/>
+                <parameter key="L_neg" value="1.0"/>
+                <parameter key="epsilon" value="0.0"/>
+                <parameter key="epsilon_plus" value="0.0"/>
+                <parameter key="epsilon_minus" value="0.0"/>
+                <parameter key="balance_cost" value="false"/>
+                <parameter key="quadratic_loss_pos" value="false"/>
+                <parameter key="quadratic_loss_neg" value="false"/>
+                <parameter key="estimate_performance" value="false"/>
+              </operator>
+              <operator activated="true" class="neural_net" compatibility="9.8.000" expanded="true" height="82" name="Neural Net (2)" width="90" x="447" y="187">
+                <list key="hidden_layers"/>
+                <parameter key="training_cycles" value="200"/>
+                <parameter key="learning_rate" value="0.3"/>
+                <parameter key="momentum" value="0.3"/>
+                <parameter key="decay" value="false"/>
+                <parameter key="shuffle" value="true"/>
+                <parameter key="normalize" value="true"/>
+                <parameter key="error_epsilon" value="1.0E-4"/>
+                <parameter key="use_local_random_seed" value="false"/>
+                <parameter key="local_random_seed" value="1992"/>
+              </operator>
+              <operator activated="false" class="naive_bayes" compatibility="9.8.000" expanded="true" height="82" name="Naive Bayes (2)" width="90" x="447" y="289">
+                <parameter key="laplace_correction" value="true"/>
+              </operator>
+              <operator activated="false" class="k_nn" compatibility="9.8.000" expanded="true" height="82" name="k-NN (2)" width="90" x="447" y="391">
+                <parameter key="k" value="20"/>
+                <parameter key="weighted_vote" value="false"/>
+                <parameter key="measure_types" value="MixedMeasures"/>
+                <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
+                <parameter key="nominal_measure" value="NominalDistance"/>
+                <parameter key="numerical_measure" value="EuclideanDistance"/>
+                <parameter key="divergence" value="GeneralizedIDivergence"/>
+                <parameter key="kernel_type" value="radial"/>
+                <parameter key="kernel_gamma" value="1.0"/>
+                <parameter key="kernel_sigma1" value="1.0"/>
+                <parameter key="kernel_sigma2" value="0.0"/>
+                <parameter key="kernel_sigma3" value="2.0"/>
+                <parameter key="kernel_degree" value="3.0"/>
+                <parameter key="kernel_shift" value="1.0"/>
+                <parameter key="kernel_a" value="1.0"/>
+                <parameter key="kernel_b" value="0.0"/>
+              </operator>
+              <operator activated="false" class="concurrency:parallel_decision_tree" compatibility="9.8.000" expanded="true" height="103" name="Decision Tree (2)" width="90" x="447" y="493">
+                <parameter key="criterion" value="gain_ratio"/>
+                <parameter key="maximal_depth" value="10"/>
+                <parameter key="apply_pruning" value="true"/>
+                <parameter key="confidence" value="0.1"/>
+                <parameter key="apply_prepruning" value="true"/>
+                <parameter key="minimal_gain" value="0.01"/>
+                <parameter key="minimal_leaf_size" value="2"/>
+                <parameter key="minimal_size_for_split" value="4"/>
+                <parameter key="number_of_prepruning_alternatives" value="3"/>
+              </operator>
+              <operator activated="false" class="concurrency:parallel_random_forest" compatibility="9.8.000" expanded="true" height="103" name="Random Forest" width="90" x="313" y="136">
+                <parameter key="number_of_trees" value="50"/>
+                <parameter key="criterion" value="gain_ratio"/>
+                <parameter key="maximal_depth" value="10"/>
+                <parameter key="apply_pruning" value="true"/>
+                <parameter key="confidence" value="0.1"/>
+                <parameter key="apply_prepruning" value="true"/>
+                <parameter key="minimal_gain" value="0.01"/>
+                <parameter key="minimal_leaf_size" value="2"/>
+                <parameter key="minimal_size_for_split" value="4"/>
+                <parameter key="number_of_prepruning_alternatives" value="3"/>
+                <parameter key="random_splits" value="false"/>
+                <parameter key="guess_subset_ratio" value="true"/>
+                <parameter key="subset_ratio" value="0.2"/>
+                <parameter key="voting_strategy" value="confidence vote"/>
+                <parameter key="use_local_random_seed" value="false"/>
+                <parameter key="local_random_seed" value="1992"/>
+                <parameter key="enable_parallel_execution" value="true"/>
+              </operator>
+              <operator activated="false" class="auto_mlp" compatibility="9.8.000" expanded="true" height="82" name="AutoMLP" width="90" x="313" y="289">
+                <parameter key="training_cycles" value="10"/>
+                <parameter key="number_of_generations" value="10"/>
+                <parameter key="number_of_esemble_mlps" value="4"/>
+              </operator>
+              <operator activated="false" class="perceptron" compatibility="9.8.000" expanded="true" height="82" name="Perceptron" width="90" x="313" y="391">
+                <parameter key="rounds" value="3"/>
+                <parameter key="learning_rate" value="0.05"/>
+              </operator>
+              <operator activated="false" class="h2o:deep_learning" compatibility="9.8.000" expanded="true" height="103" name="Deep Learning" width="90" x="313" y="34">
+                <parameter key="activation" value="Rectifier"/>
+                <enumeration key="hidden_layer_sizes">
+                  <parameter key="hidden_layer_sizes" value="50"/>
+                  <parameter key="hidden_layer_sizes" value="50"/>
+                </enumeration>
+                <enumeration key="hidden_dropout_ratios"/>
+                <parameter key="reproducible_(uses_1_thread)" value="false"/>
+                <parameter key="use_local_random_seed" value="false"/>
+                <parameter key="local_random_seed" value="1992"/>
+                <parameter key="epochs" value="10.0"/>
+                <parameter key="compute_variable_importances" value="false"/>
+                <parameter key="train_samples_per_iteration" value="-2"/>
+                <parameter key="adaptive_rate" value="true"/>
+                <parameter key="epsilon" value="1.0E-8"/>
+                <parameter key="rho" value="0.99"/>
+                <parameter key="learning_rate" value="0.005"/>
+                <parameter key="learning_rate_annealing" value="1.0E-6"/>
+                <parameter key="learning_rate_decay" value="1.0"/>
+                <parameter key="momentum_start" value="0.0"/>
+                <parameter key="momentum_ramp" value="1000000.0"/>
+                <parameter key="momentum_stable" value="0.0"/>
+                <parameter key="nesterov_accelerated_gradient" value="true"/>
+                <parameter key="standardize" value="true"/>
+                <parameter key="L1" value="1.0E-5"/>
+                <parameter key="L2" value="0.0"/>
+                <parameter key="max_w2" value="10.0"/>
+                <parameter key="loss_function" value="Automatic"/>
+                <parameter key="distribution_function" value="AUTO"/>
+                <parameter key="early_stopping" value="false"/>
+                <parameter key="stopping_rounds" value="1"/>
+                <parameter key="stopping_metric" value="AUTO"/>
+                <parameter key="stopping_tolerance" value="0.001"/>
+                <parameter key="missing_values_handling" value="MeanImputation"/>
+                <parameter key="max_runtime_seconds" value="0"/>
+                <list key="expert_parameters"/>
+                <list key="expert_parameters_"/>
+              </operator>
+              <operator activated="false" class="polynomial_by_binomial_classification" compatibility="9.8.000" expanded="true" height="82" name="Polynominal by Binominal Classification" width="90" x="648" y="187">
+                <parameter key="classification_strategies" value="1 against all"/>
+                <parameter key="random_code_multiplicator" value="2.0"/>
+                <parameter key="use_local_random_seed" value="false"/>
+                <parameter key="local_random_seed" value="1992"/>
+                <process expanded="true">
+                  <operator activated="true" class="h2o:logistic_regression" compatibility="9.8.000" expanded="true" height="124" name="Logistic Regression" width="90" x="648" y="493">
+                    <parameter key="solver" value="AUTO"/>
+                    <parameter key="reproducible" value="false"/>
+                    <parameter key="maximum_number_of_threads" value="4"/>
+                    <parameter key="use_regularization" value="false"/>
+                    <parameter key="lambda_search" value="false"/>
+                    <parameter key="number_of_lambdas" value="0"/>
+                    <parameter key="lambda_min_ratio" value="0.0"/>
+                    <parameter key="early_stopping" value="true"/>
+                    <parameter key="stopping_rounds" value="3"/>
+                    <parameter key="stopping_tolerance" value="0.001"/>
+                    <parameter key="standardize" value="true"/>
+                    <parameter key="non-negative_coefficients" value="false"/>
+                    <parameter key="add_intercept" value="true"/>
+                    <parameter key="compute_p-values" value="true"/>
+                    <parameter key="remove_collinear_columns" value="true"/>
+                    <parameter key="missing_values_handling" value="MeanImputation"/>
+                    <parameter key="max_iterations" value="0"/>
+                    <parameter key="max_runtime_seconds" value="0"/>
+                  </operator>
+                  <connect from_port="training set" to_op="Logistic Regression" to_port="training set"/>
+                  <connect from_op="Logistic Regression" from_port="model" to_port="model"/>
+                  <portSpacing port="source_training set" spacing="0"/>
+                  <portSpacing port="sink_model" spacing="0"/>
+                </process>
+              </operator>
+              <connect from_port="training set" to_op="Neural Net (2)" to_port="training set"/>
+              <connect from_op="Neural Net (2)" from_port="model" to_port="model"/>
+              <portSpacing port="source_training set" spacing="0"/>
+              <portSpacing port="sink_model" spacing="0"/>
+            </process>
+          </operator>
+          <operator activated="false" class="neural_net" compatibility="9.8.000" expanded="true" height="82" name="Neural Net" width="90" x="380" y="187">
+            <list key="hidden_layers"/>
+            <parameter key="training_cycles" value="500"/>
+            <parameter key="learning_rate" value="0.01"/>
+            <parameter key="momentum" value="0.9"/>
+            <parameter key="decay" value="false"/>
+            <parameter key="shuffle" value="true"/>
+            <parameter key="normalize" value="true"/>
+            <parameter key="error_epsilon" value="1.0E-4"/>
+            <parameter key="use_local_random_seed" value="false"/>
+            <parameter key="local_random_seed" value="1992"/>
+          </operator>
+          <operator activated="false" class="support_vector_machine" compatibility="9.8.000" expanded="true" height="124" name="SVM" width="90" x="112" y="187">
+            <parameter key="kernel_type" value="dot"/>
+            <parameter key="kernel_gamma" value="1.0"/>
+            <parameter key="kernel_sigma1" value="1.0"/>
+            <parameter key="kernel_sigma2" value="0.0"/>
+            <parameter key="kernel_sigma3" value="2.0"/>
+            <parameter key="kernel_shift" value="1.0"/>
+            <parameter key="kernel_degree" value="2.0"/>
+            <parameter key="kernel_a" value="1.0"/>
+            <parameter key="kernel_b" value="0.0"/>
+            <parameter key="kernel_cache" value="200"/>
+            <parameter key="C" value="0.0"/>
+            <parameter key="convergence_epsilon" value="0.001"/>
+            <parameter key="max_iterations" value="100000"/>
+            <parameter key="scale" value="true"/>
+            <parameter key="calculate_weights" value="true"/>
+            <parameter key="return_optimization_performance" value="true"/>
+            <parameter key="L_pos" value="1.0"/>
+            <parameter key="L_neg" value="1.0"/>
+            <parameter key="epsilon" value="0.0"/>
+            <parameter key="epsilon_plus" value="0.0"/>
+            <parameter key="epsilon_minus" value="0.0"/>
+            <parameter key="balance_cost" value="false"/>
+            <parameter key="quadratic_loss_pos" value="false"/>
+            <parameter key="quadratic_loss_neg" value="false"/>
+            <parameter key="estimate_performance" value="false"/>
+          </operator>
+          <connect from_port="training set" to_op="AdaBoost" to_port="training set"/>
+          <connect from_op="AdaBoost" from_port="model" to_port="model"/>
+          <portSpacing port="source_training set" spacing="0"/>
+          <portSpacing port="sink_model" spacing="0"/>
+          <portSpacing port="sink_through 1" spacing="0"/>
+        </process>
+        <process expanded="true">
+          <operator activated="true" class="apply_model" compatibility="9.8.000" expanded="true" height="82" name="Apply Model" width="90" x="112" y="34">
+            <list key="application_parameters"/>
+            <parameter key="create_view" value="false"/>
+          </operator>
+          <operator activated="true" class="performance_classification" compatibility="9.8.000" expanded="true" height="82" name="Performance" width="90" x="246" y="34">
+            <parameter key="main_criterion" value="first"/>
+            <parameter key="accuracy" value="true"/>
+            <parameter key="classification_error" value="false"/>
+            <parameter key="kappa" value="false"/>
+            <parameter key="weighted_mean_recall" value="false"/>
+            <parameter key="weighted_mean_precision" value="false"/>
+            <parameter key="spearman_rho" value="false"/>
+            <parameter key="kendall_tau" value="false"/>
+            <parameter key="absolute_error" value="false"/>
+            <parameter key="relative_error" value="false"/>
+            <parameter key="relative_error_lenient" value="false"/>
+            <parameter key="relative_error_strict" value="false"/>
+            <parameter key="normalized_absolute_error" value="false"/>
+            <parameter key="root_mean_squared_error" value="false"/>
+            <parameter key="root_relative_squared_error" value="false"/>
+            <parameter key="squared_error" value="false"/>
+            <parameter key="correlation" value="false"/>
+            <parameter key="squared_correlation" value="false"/>
+            <parameter key="cross-entropy" value="false"/>
+            <parameter key="margin" value="false"/>
+            <parameter key="soft_margin_loss" value="false"/>
+            <parameter key="logistic_loss" value="false"/>
+            <parameter key="skip_undefined_labels" value="true"/>
+            <parameter key="use_example_weights" value="true"/>
+            <list key="class_weights"/>
+          </operator>
+          <connect from_port="model" to_op="Apply Model" to_port="model"/>
+          <connect from_port="test set" to_op="Apply Model" to_port="unlabelled data"/>
+          <connect from_op="Apply Model" from_port="labelled data" to_op="Performance" to_port="labelled data"/>
+          <connect from_op="Performance" from_port="performance" to_port="performance 1"/>
+          <connect from_op="Performance" from_port="example set" to_port="test set results"/>
+          <portSpacing port="source_model" spacing="0"/>
+          <portSpacing port="source_test set" spacing="0"/>
+          <portSpacing port="source_through 1" spacing="0"/>
+          <portSpacing port="sink_test set results" spacing="0"/>
+          <portSpacing port="sink_performance 1" spacing="0"/>
+          <portSpacing port="sink_performance 2" spacing="0"/>
+        </process>
+      </operator>
+      <operator activated="false" class="group_models" compatibility="9.8.000" expanded="true" height="68" name="Group Models" width="90" x="581" y="340"/>
+      <operator activated="false" class="retrieve" compatibility="9.8.000" expanded="true" height="68" name="Retrieve concat_dataset_test" width="90" x="112" y="442">
+        <parameter key="repository_entry" value="data/concat_dataset_test"/>
+      </operator>
+      <operator activated="false" class="apply_model" compatibility="9.8.000" expanded="true" height="82" name="Apply Model (2)" width="90" x="782" y="442">
+        <list key="application_parameters"/>
+        <parameter key="create_view" value="false"/>
+      </operator>
+      <operator activated="false" class="write_csv" compatibility="9.8.000" expanded="true" height="82" name="Write CSV" width="90" x="983" y="340">
+        <parameter key="column_separator" value=","/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+      </operator>
+      <operator activated="false" class="normalize" compatibility="9.8.000" expanded="true" height="103" name="Normalize" width="90" x="246" y="187">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="all"/>
+        <parameter key="attribute" value=""/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="numeric"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="real"/>
+        <parameter key="block_type" value="value_series"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_series_end"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="method" value="Z-transformation"/>
+        <parameter key="min" value="0.0"/>
+        <parameter key="max" value="1.0"/>
+        <parameter key="allow_negative_values" value="false"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_op="Replace Missing Values" to_port="example set input"/>
+      <connect from_op="Replace Missing Values" from_port="example set output" to_op="Set Role" to_port="example set input"/>
+      <connect from_op="Set Role" from_port="example set output" to_op="Cross Validation" to_port="example set"/>
+      <connect from_op="Cross Validation" from_port="model" to_port="result 1"/>
+      <connect from_op="Cross Validation" from_port="test result set" to_port="result 2"/>
+      <connect from_op="Cross Validation" from_port="performance 1" to_port="result 3"/>
+      <connect from_op="Group Models" from_port="model out" to_op="Apply Model (2)" to_port="model"/>
+      <connect from_op="Retrieve concat_dataset_test" from_port="output" to_op="Apply Model (2)" to_port="unlabelled data"/>
+      <connect from_op="Apply Model (2)" from_port="labelled data" to_op="Write CSV" to_port="input"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <portSpacing port="sink_result 4" spacing="0"/>
+    </process>
+  </operator>
+</process>
